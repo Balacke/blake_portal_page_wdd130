@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kings&display=swap');
+
+*{
+    box-sizing: auto;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    background-color:#e9fff9ff;
+    font-size: 16px;
+    color: gold;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 3;
+    
+}
+
+#card {
+    background-color:rgb(80, 173, 235);
+    align-self: center;
+    grid-column: 2;
+    grid-template-rows: 9;
+    align-items: center;
+}
+
+header {
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    margin: auto;
+    padding: auto;
+    grid-row: 1;
+}
+
+#subtitle {
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    grid-row:2;
+}
+
+#photo {
+    margin: auto;
+    border:rgb(255, 255, 255) 1%;
+    padding:5px;
+    grid-row:3, 4;
+}
+
+img {
+    width: 30%
+}
+
+img :hover{
+    width: 60%
+}
+
+#list{
+    text-decoration-style: dotted;
+    font-size: 8%;
+    grid-row:6, 7;
+}
+
+#quote{
+    font-family: Kings, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color:rgb(248, 198, 35);
+    font-size: 16px;
+    grid-row: 8,9;
+}

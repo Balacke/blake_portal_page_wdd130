@@ -1,0 +1,100 @@
+<!-----
+Author: Blake
+Purpose: Portal home page
+Sources: Pythonista(gpt)-helped with input form 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Personal Web Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portalstyles.css" >
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <img id ="logo1" src="portal_logo1.png" alt="Logo">
+                <h1>My Portal</h1>
+                <h2>My Web Development Journey</h2>
+            </div>
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="./wwr/index.html">WWR</a>
+            <a href="ice.html">ICE</a>
+            <a href="about_me.html">About Me</a>
+            <a href="./WDD130_Project_Fuller/index.html">Lead Dev Project</a>
+            <a href="./Wdd130_Project_Elder/docs/instructions.html">Junior Dev A Project</a>
+            <a href="./wwd130_clarkjones/README.md">Junior Dev B Project</a>
+            <a href="./Wdd130_Project_Kenworthy/README.md">Client Project</a>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            
+            <img id = "profile_pic" src="profile_pic1.jpg" alt="Profile Image">
+            <!-- Welcome Section -->
+            <section class="welcome">
+                    <h1>Welcome to My Portal</h1>
+                    <p>
+                        This portal showcases my web development projects and technical skills.
+                        I am building structured and styled websites using HTML and CSS.
+                    </p>
+                    <p>
+                        Visit my <a href="/wwr/index.html">WWR Project</a> to see one of my completed assignments.
+                    </p>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="projects">
+                <h3>My Projects</h3>
+                <ul>
+                    <li>White Water Rafting Website (WWR)</li>
+                    <li>In-Class Exercises (ICE)</li>
+                    <li>Future Development Projects</li>
+                </ul>
+            </section>
+            <!-- Contact Form -->
+            <aside>
+                <h5>Contact Me</h5>
+                <form id = "myForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+
+                    <label for="title">Subject:</label>
+                    <input type="text" id="title">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="4"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </aside>
+
+            <!-- Extra Heading -->
+            <section class = "thanks">
+                <h6>Thank you for visiting my portal!</h6>
+            </section>
+
+        </main>
+                <!-- FOOTER -->
+        <footer>
+            <p> 2026 Blake Kenworthy| <a href="mailto:blake.kenworthy864@gmail.com">Email Me</a></p>
+        </footer>
+    </div>
+</body>
+
+
+</html>
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background: rgb(120, 96, 64);
+            grid-template-columns: 1fr 3fr 1fr;
+            display: grid;
+            height: 1000px;
+        }
+
+        #formContainer {
+            background-color: white;
+            border-radius: 5%;
+            height: 850px;
+            width: 500px;
+            grid-column: 2;
+            border: blue 20px solid;
+            margin-bottom: 100px;
+            margin-top: 70px;
+        }
+
+        #myForm {
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap:15px;
+        }
+
+        #title {
+            background-image: url("./images/jesus_feeds_5000.jpeg");
+            background-size: cover;
+            color:white;
+            text-align:center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            height: 400px;
+            margin:20px;
+            background-position: center;
+            text-shadow: 3px 3px 3px black;
+            grid-column: 2;
+        
+        }
+
+        #news {
+            grid-column: 1/3;
+            text-align: center;
+        }
+        
+        #terms {
+            grid-column: 1/3;
+            grid-row:7;
+            text-align: center;
+        }
+
+
+        h1 {
+            font-size: 2.5em;
+            padding-top: 150px;
+        }
+        #myForm label {
+            grid-column: 1;
+            text-align: right;
+
+        }
+
+        #myForm input {
+            grid-column: 2;
+            align-self: left;
+            
+        }
+        #submit {
+            text-align: right;
+            grid-column: 1;
+    
+        }
+
+        #scriptures {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            grid-column: 1/3;
+
+        }
+
+        #old {
+            grid-row: 1;
+            grid-column: 1;
+            height: 100px;
+
+        }
+        #new {
+            grid-row: 1;
+            grid-column: 2;
+            height: 100px;
+        }
+        #book {
+            grid-row: 1;
+            grid-column: 3;
+            height: 100px;
+        }
+
+        #doctrine {
+            grid-row: 1;
+            grid-column: 4;
+            height: 100px;
+
+        }
+        #pearl {
+            grid-row: 1;
+            grid-column: 5;
+            height: 100px;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <div id="formContainer">
+        <button type="button" id="closeBtn">X</button> 
+ 
+        <div id="title">
+            <h1>Daily Feed</h1>
+            <h2>Scripture a Day</h2>
+            
+
+        </div>
+        <form id="myForm">
+                   <h3>Sign Up for Daily Scripture Feed</h3>
+     
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <section id="news">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label>
+            </section>
+
+            <section id="terms">
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">I acknowledge the terms and conditions</label>
+            </section>
+
+            <section id="submit">
+                <button type="submit">Submit</button>
+            </section>
+            <div id="scriptures">
+                <img id="old" src="./images/old_testament.webp" alt="old_testament">
+                <img id="new" src="./images/new_testament.webp" alt="new_testament">
+                <img id="book" src="./images/book_of_mormon.webp" alt="book_of_mormon">
+                <img id="doctrine" src="./images/doctrine_and_covenants.webp" alt="doctrine_and_covenants">
+                <img id="pearl" src="./images/pearl_of_great_price.webp" alt="pearl_of_great_price">
+            </div>
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                } +
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>

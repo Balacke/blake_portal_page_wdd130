@@ -1,0 +1,60 @@
+#background_image {
+    size: 80%;
+    background-image: url(images/christus.webp);
+    background-size: cover;
+    background-position:center ;
+}
+body {
+    background-color: aliceblue;
+    color:mintcream;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+heading{
+    align-items: center;
+}
+presidency{
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 200px;
+}
+#eyring {
+    grid-column: 1;
+    border-radius: 50%;
+    border-color: black;
+}
+#oaks {
+     grid-column: 2;
+    border-radius: 50%;
+    border-color: black;
+}
+#christofferson {
+     grid-column: 3;
+    border-radius: 50%;
+    border-color: black;
+}
+
+apostles {
+    font-size: 20px;
+    align-items: center;
+}
+apostles_images {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+
+}
+#holland {
+    grid-row: 1;
+    grid-column: 1;
+    border-radius: 50%;
+    border-color: black;
+    width: 100px;
+}
+#uchtdorf {
+    grid-row: 1;
+    grid-column: 2;
+    border-radius: 50%;
+    border-color: black;
+    width: 100px;
+}

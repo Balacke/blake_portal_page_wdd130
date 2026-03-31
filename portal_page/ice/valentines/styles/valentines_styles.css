@@ -1,0 +1,120 @@
+/* Add your CSS here to style your valentines day page */
+
+/********************
+Valentines Day
+Author: Blake
+Date: 2026-02-12
+*************/
+body{
+    background-color: pink;
+    color: rgb(145, 0, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*******Global stlyes*******/
+
+header {
+    background-color: palevioletred;
+    padding: 20px;
+    text-align: center;
+
+}
+/****wrapper style*****/
+#wrapper {
+    max-width: 1200px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/*****Nav Styles*******/
+nav {
+    list-style-type: style type none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/***UL stlyes*****/
+nav ul {
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: georgian;
+}
+
+
+/*******main style******/
+
+main {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+    display: grid;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+h1 :hover {
+    font-size: 4em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    background-color: violet;
+}
+
+img{
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    justify-self: center;
+    grid-column: 1/4;
+
+}
+
+img :hover{
+    max-width: 70%;
+    justify-self: last baseline;
+    padding: 3%;
+    background-color: salmon;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: pink;
+    border-radius: 10px;
+    grid-column: 1/4;
+
+}
+
+section :hover{
+    font-size: 2em;
+    color: purple;
+    background-color: rgb(233, 95, 95);
+
+}
+
+section p{
+    font-size: .5em;
+    line-height: 1.5;
+    background-color: lightpink;
+}
+
+/******Footer styles*******/
+footer {
+    background-color: palevioletred;
+    text-align: center;
+    padding: 10px;
+}
+
