@@ -7,3 +7,6 @@
 [submodule "wwd130_clarkjones"]
 	path = wwd130_clarkjones
 	url = https://github.com/SevrynOrmson/wwd130_clarkjones
+[submodule "Wdd130_Project_Kenworthy"]
+	path = Wdd130_Project_Kenworthy
+	url = https://github.com/Balacke/Wdd130_Project_Kenworthy
