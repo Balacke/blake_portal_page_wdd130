@@ -1,3 +1,9 @@
 [submodule "WDD130_Project_Fuller"]
 	path = WDD130_Project_Fuller
 	url = https://github.com/rikkyd31/WDD130_Project_Fuller
+[submodule "Wdd130_Project_Elder"]
+	path = Wdd130_Project_Elder
+	url = https://github.com/BoredSable/Wdd130_Project_Elder
+[submodule "wwd130_clarkjones"]
+	path = wwd130_clarkjones
+	url = https://github.com/SevrynOrmson/wwd130_clarkjones
