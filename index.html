@@ -11,7 +11,7 @@ Sources: Copilot - Helped me use submodules to let me link to my other repositor
     <meta charset="UTF-8">
     <title>My Personal Web Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./portalstyles.css" >
+    <link rel="stylesheet" href="./styles/portalstyles.css" >
 </head>
 
 <body>
@@ -20,28 +20,48 @@ Sources: Copilot - Helped me use submodules to let me link to my other repositor
         <!-- HEADER -->
         <header>
             <div class="logo">
-                <img id ="logo1" src="./portal_logo1.png" alt="Logo">
+                <img id ="logo1" src="./docs/portal_logo1.png" alt="Logo">
                 <h1>My Portal</h1>
                 <h2>My Web Development Journey</h2>
             </div>
         </header>
 
         <!-- NAVIGATION -->
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./wwr/index.html">WWR</a>
-            <a href="./ice.html">ICE</a>
-            <a href="./about_me.html">About Me</a>
-            <a href="./WDD130_Project_Fuller/index.html">Lead Dev Project</a>
-            <a href="./Wdd130_Project_Elder/docs/instructions.html">Junior Dev A Project</a>
-            <a href="./wwd130_clarkjones/back.html">Junior Dev B Project</a>
-            <a href="./Wdd130_Project_Kenworthy/README.md">Client Project</a>
+        <!--Had to look up how to add submenus
+        https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./docs/index.html">Home</a></li>
+                <li><a href="./wwr/index.html">WWR</a></li>
+                <li><a href="./docs/ice.html">ICE</a></li>
+                <li><a href="./docs/about_me.html">About Me</a></li>
+        
+                <li class="has-submenu">
+                    <a href="#">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="./WDD130_Project_Fuller/index.html">Lead Dev Project</a></li>
+                        <li><a href="./Wdd130_Project_Elder/docs/instructions.html">Junior Dev A Project</a></li>
+                        <li><a href="./wwd130_clarkjones/back.html">Junior Dev B Project</a></li>
+                        <li><a href="./Wdd130_Project_Kenworthy/README.md">Client Project</a></li>
+                    </ul>
+                </li>
+        
+                <li class="has-submenu">
+                    <a href="#">Reports</a>
+                    <ul class="submenu">
+                        <li><a href="./REPORTS/client_report.html">Client Report</a></li>
+                        <li><a href="./REPORTS/lead_dev_report.html">Lead Developer Report</a></li>
+                        <li><a href="./REPORTS/jun_dev_a_report.html">Junior Developer A Report</a></li>
+                        <li><a href="./REPORTS/jun_dev_b_report.html">Junior Developer B Report</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
 
         <!-- MAIN CONTENT -->
         <main>
             
-            <img id = "profile_pic" src="./profile_pic1.jpg" alt="Profile Image">
+            <img id = "profile_pic" src="./docs/profile_pic1.jpg" alt="Profile Image">
             <!-- Welcome Section -->
             <section class="welcome">
                     <h1>Welcome to My Portal</h1>

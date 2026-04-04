@@ -1,25 +1,24 @@
-
-
+/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     color: #333333;
 }
 
-        /* ===== PAGE GRID LAYOUT ===== */
+/* ===== PAGE GRID LAYOUT ===== */
 .container {
     display: grid;
     align-items: center;
 }
 
- header {
+header {
     background-color: #1F3C88;
     color: white;
     padding: 20px;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
- }
+}
 
 .logo {
     font-family: Arial Black, sans-serif;
@@ -32,26 +31,89 @@ body {
     height: auto;
 }
 
-nav {
-
+/* ===== NAVIGATION ===== */
+.main-nav {
     background-color: #00BFA6;
     text-align: center;
     padding: 10px;
-    grid-row: 2;
 }
 
-nav a {
+/* ONLY top-level UL is flex */
+.main-nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+/* NAV ITEMS */
+.main-nav li {
+    position: relative;
+}
+
+/* LINKS */
+.main-nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
     font-weight: bold;
+    padding: 8px 12px;
+    display: block;
 }
 
-nav a:hover {
+/* HOVER */
+.main-nav a:hover {
+    color: #1F3C88;
     text-decoration: underline;
-    color:#1F3C88
 }
 
+/* ===== SUBMENU ===== */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: #00BFA6;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 200px;
+
+    z-index: 100;
+
+    /* Force vertical layout */
+    flex-direction: column;
+}
+
+/* Show dropdown */
+.has-submenu:hover>.submenu {
+    display: block;
+}
+
+/* Submenu items */
+.submenu li {
+    display: block;
+}
+
+/* Submenu links */
+.submenu a {
+    padding: 8px 15px;
+    white-space: nowrap;
+}
+
+/* Submenu hover */
+.submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #1F3C88;
+    text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
 main {
     padding: 30px;
     background-color: #FFFFFF;
@@ -60,21 +122,24 @@ main {
     gap: 40px;
     align-items: center;
 }
+
 h3 {
     font-size: 1.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
 }
+
 .subheading {
     text-align: left;
-    padding-inline-start:20px ;
+    padding-inline-start: 20px;
 }
+
 #old_family_picture {
     height: 400px;
     padding-left: 13%;
 }
 
-        /* ===== WELCOME SECTION GRID ===== */
+/* ===== WELCOME SECTION ===== */
 .welcome {
     grid-column: 1;
     grid-row: 1;
@@ -90,10 +155,7 @@ h3 {
 .projects {
     grid-column: 1;
     display: grid;
-}
-
-.projects h3, ul {
-    padding-left: 40%;
+    padding-left: 30%;
 }
 
 aside {
@@ -101,13 +163,14 @@ aside {
     text-align: center;
 }
 
-        /* ===== FORM STYLING ===== */
+/* ===== FORM ===== */
 form {
     max-width: 200%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 8px;
 }
 
@@ -117,34 +180,41 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-
 }
-/*****Table Styling**************/
+
+/* ===== TABLE ===== */
 table {
     border: #333333 dashed;
     display: flex;
 }
+
 th {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
     font-size: 1.1em;
     text-align: right;
 }
+
 td {
     border: #333333 solid;
 }
+
 .text {
     padding-left: 20px;
 }
+
+/* FIXED selector */
 .link {
     color: #1F3C88;
 }
-.link :hover {
+
+.link:hover {
     color: #00BFA6;
     text-decoration: underline;
-    background-color: rgba(20, 80, 10, .2)
+    background-color: rgba(20, 80, 10, .2);
 }
-/********thanks section *****/
+
+/* ===== THANKS SECTION ===== */
 .thanks {
     display: grid;
     text-align: right;
@@ -153,6 +223,7 @@ td {
     text-decoration: wavy;
 }
 
+/* ===== FOOTER ===== */
 footer {
     background-color: #333333;
     color: white;
