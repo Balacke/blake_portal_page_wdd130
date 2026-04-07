@@ -230,3 +230,11 @@ footer {
     text-align: center;
     padding: 15px;
 }
+footer h2 a{
+    color: #1F3C88;
+}
+
+footer h2 a:hover {
+    color: #00BFA6;
+    font-size: 3rem;
+}
